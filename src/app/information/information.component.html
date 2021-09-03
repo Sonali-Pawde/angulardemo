@@ -1,0 +1,55 @@
+
+ <!-- <div class="well hoverwell thumbnail"> -->
+<div class="container">
+   
+    <h2 class="well hoverwell thumbnail">Personal Information</h2>
+    <form #userForm ="ngForm"  (ngSubmit) = "onSubmit(userForm)" >
+        {{information| json}}
+
+        <div class="form-group">
+            <label for="first_name" >first name</label>
+            <input id="first_name" name="first_name" placeholder="first_name" class="form-control"  [(ngModel)] ="information.first_name" 
+            required #nameField="ngModel"
+            [class.field-error]= "!userForm.submitted && nameField.invalid"  />
+            <div [hidden]="nameField.value || nameField.untouched"
+            class="alert alert-danger">Enter name
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="last_name" >Last name</label>
+            <input id="last_name" name="last_name" placeholder="last_name" class="form-control"  [(ngModel)] ="information.last_name"/>
+        </div>
+
+        <div class="form-group">
+            <label for="email" >Email</label>
+            <input id="email" name="email" placeholder="email" class="form-control"  [(ngModel)] ="information.email"/>
+        </div>
+
+        <div class="form-group">
+            <label for="phone" >Mobile</label>
+            <input id="phone" name="phone" placeholder="phone" class="form-control"  [(ngModel)] ="information.phone"/>
+        </div>
+
+        <div class="form-group">
+            <label for="organization" >Organization</label>
+            <input id="organization" name="organization" placeholder="organization" class="form-control"  [(ngModel)] ="information.organization"/>
+        </div>
+
+        <div class="form-group">
+            <label for="designation" >Designation</label>
+            <input id="designation" name="designation" placeholder="designation" class="form-control"  [(ngModel)] ="information.designation"/>
+        </div>
+
+        <div class="form-group">
+            <label for="salary" >Salary</label>
+            <input id="salary" name="salary" placeholder="salary" class="form-control"  [(ngModel)] ="information.salary"/>
+        </div>
+
+        <button class="btn btn-primary" (click)='insertDetails()' > Submit </button>
+        <!-- <div>{{message}}</div> -->
+    </form>
+
+</div>
+

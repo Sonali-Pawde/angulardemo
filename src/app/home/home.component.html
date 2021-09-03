@@ -1,0 +1,12 @@
+<div class="right_col" role="main">
+    <p>Breweries!</p>
+    <ul *ngIf="brews">
+        <li *ngFor="let brew of brews">
+            <p class="name">{{brew.name}}</p>
+            <p class="country">{{brew.country}}</p>
+            <p class="country">{{brew.city}}</p>
+            <a href="{{brew.website_url}}">Site</a>
+        </li>
+    </ul>
+    </div>
+

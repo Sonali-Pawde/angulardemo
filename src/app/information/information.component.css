@@ -1,0 +1,16 @@
+/* .ng-invalid:not(form).ng-touched{
+    border: 1 px solid red;
+} */
+
+/* .field-error{
+    border:  1 px solid red;
+} */
+
+.hoverwell:hover{
+    background-color:#4235f7;
+    cursor: pointer;
+}
+
+.container{
+    padding-top :10 px;
+}
